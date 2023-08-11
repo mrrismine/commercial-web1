@@ -30,8 +30,8 @@ const SocialContainer = styled.div`
    flex-direction: row;
 `
 const SocialIcon = styled.div`
-   width: 40px;
-   height: 40px;
+   width: 50px;
+   height: 50px;
    border-radius: 50%;
    background-color: #${props => props.color};
    display: flex;

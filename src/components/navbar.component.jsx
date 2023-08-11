@@ -3,6 +3,8 @@ import { Outlet } from "react-router-dom"
 import { styled } from "styled-components"
 
 import Announcement from "./announcement.component";
+import NewsLetter from "./newsletter.component";
+import Footer from "./footer.component";
 
 import { Search, ShoppingBasket } from "@mui/icons-material";
 import { MenuItem, Badge } from "@mui/material";
@@ -38,6 +40,7 @@ const SearchContainer = styled.div`
 `
 
 const Input = styled.input`
+   margin-left: 5px;
    border: none;
 `
 
@@ -67,7 +70,7 @@ const Navbar = () => {
                <Left>
                   <Language> EN </Language>
                   <SearchContainer>
-                     <Input />
+                     <Input placeholder="search"/>
                      <Search style={{color:"gray", fontSize:16}}/>
                   </SearchContainer>
                </Left>
@@ -80,7 +83,7 @@ const Navbar = () => {
                   <MenuItem>Register </MenuItem>
                   <MenuItem>Sign In </MenuItem>
                   <MenuItem>
-                     <Badge badgeContent={null} color="primary">
+                     <Badge badgeContent={2} color="primary">
                         <ShoppingBasket />
                      </Badge>
                   </MenuItem>
@@ -88,6 +91,8 @@ const Navbar = () => {
             </Wrapper>
          </Container>
          < Outlet />
+         <NewsLetter/>
+         <Footer />
       </Fragment>
    )
 }
